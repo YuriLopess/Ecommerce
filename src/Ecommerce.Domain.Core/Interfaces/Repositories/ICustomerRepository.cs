@@ -11,8 +11,9 @@ namespace Ecommerce.Domain.Core.Interfaces.Repositories
     {
         void Insert(Customer customer);
         void Update(Customer customer);
-        void Delete(Customer customer);
+        void Delete(string id);
         IEnumerable<Customer> GetAll();
-        Customer Get(int id);
+        Customer Get(string id);
+        Customer? GetByEmail(string email);
     }
 }

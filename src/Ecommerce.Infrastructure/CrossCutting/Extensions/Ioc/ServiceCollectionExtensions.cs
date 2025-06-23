@@ -1,4 +1,10 @@
-﻿namespace Ecommerce.Infrastructure.CrossCutting.Extensions.Ioc
+﻿using Ecommerce.Domain.Core.Interfaces.Repositories;
+using Ecommerce.Domain.Core.Services;
+using Ecommerce.Domain.Services;
+using Ecommerce.Infrastructure.Data.Repositories;
+using Raven.Client.Documents.Operations;
+
+namespace Ecommerce.Infrastructure.CrossCutting.Extensions.Ioc
 {
     public static class ServiceCollectionExtensions
     {
@@ -20,6 +26,18 @@
                 return store;
             });
 
+            return servicesCollection;
+        }
+
+        public static IServiceCollection AddRepositories(this IServiceCollection servicesCollection)
+        {
+            servicesCollection.TryAddSingleton<ICustomerRepository, CustomerRepository>();
+            return servicesCollection;
+        }
+
+        public static IServiceCollection AddDomainServices(this IServiceCollection servicesCollection)
+        {
+            servicesCollection.TryAddScoped<ICustomerService, CustomerService>();
             return servicesCollection;
         }
     }
