@@ -218,6 +218,16 @@
         "build": {
           "buildTransitive/net8.0/_._": {}
         }
+      },
+      "Ecommerce.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Ecommerce.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Ecommerce.Domain.dll": {}
+        }
       }
     }
   },
@@ -553,10 +563,16 @@
         "system.collections.immutable.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "Ecommerce.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Ecommerce.Domain/Ecommerce.Domain.csproj",
+      "msbuildProject": "../Ecommerce.Domain/Ecommerce.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "Ecommerce.Domain >= 1.0.0",
       "Microsoft.Extensions.DependencyInjection.Abstractions >= 9.0.6",
       "RavenDB.Client >= 7.0.3"
     ]
@@ -592,7 +608,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\costa\\source\\repos\\Ecommerce\\src\\Ecommerce.Domain\\Ecommerce.Domain.csproj": {
+              "projectPath": "C:\\Users\\costa\\source\\repos\\Ecommerce\\src\\Ecommerce.Domain\\Ecommerce.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

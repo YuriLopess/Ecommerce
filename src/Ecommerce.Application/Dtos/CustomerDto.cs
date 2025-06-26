@@ -1,21 +1,19 @@
-﻿using System;
+﻿using Ecommerce.Domain.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ecommerce.Domain.Model
+namespace Ecommerce.Application.Dtos
 {
-    public class Customer
+    public class CustomerDto
     {
         public string Name { get; set; }
         public string LastName { get; set; }
         public string Email { get; set; }
         public DateTime BirtDate { get; set; }
         public string Cpf { get; set; }
-        public Address Address { get; set; }
-        public bool IsActive { get; set; }
-        public DateTime CreatedDate { get; set; }
-
+        public AddressDto Address { get; set; }
     }
-}
+} 

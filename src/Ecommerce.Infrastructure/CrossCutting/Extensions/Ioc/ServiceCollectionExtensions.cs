@@ -1,5 +1,9 @@
-﻿using Ecommerce.Domain.Core.Interfaces.Repositories;
+﻿using Ecommerce.Application.Dtos;
+using Ecommerce.Application.Mappers;
+using Ecommerce.Domain.Core.Interfaces.Repositories;
 using Ecommerce.Domain.Core.Services;
+using Ecommerce.Domain.Mappers.Interfaces;
+using Ecommerce.Domain.Model;
 using Ecommerce.Domain.Services;
 using Ecommerce.Infrastructure.Data.Repositories;
 using Raven.Client.Documents.Operations;
@@ -38,6 +42,14 @@ namespace Ecommerce.Infrastructure.CrossCutting.Extensions.Ioc
         public static IServiceCollection AddDomainServices(this IServiceCollection servicesCollection)
         {
             servicesCollection.TryAddScoped<ICustomerService, CustomerService>();
+            return servicesCollection;
+        }
+
+        public static IServiceCollection AddMappers(this IServiceCollection servicesCollection)
+        {
+            servicesCollection.TryAddScoped<IMapper<Customer, CustomerDto>, CustomerMapper>();
+            servicesCollection.TryAddScoped<IMapper<CustomerDto, Customer>, CustomerMapper>();
+
             return servicesCollection;
         }
     }
