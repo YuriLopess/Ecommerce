@@ -118,6 +118,9 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+              "C:\\Users\\costa\\source\\repos\\Ecommerce\\src\\Ecommerce.Domain.Core\\Ecommerce.Domain.Core.csproj": {
+                "projectPath": "C:\\Users\\costa\\source\\repos\\Ecommerce\\src\\Ecommerce.Domain.Core\\Ecommerce.Domain.Core.csproj"
+              },
               "C:\\Users\\costa\\source\\repos\\Ecommerce\\src\\Ecommerce.Domain\\Ecommerce.Domain.csproj": {
                 "projectPath": "C:\\Users\\costa\\source\\repos\\Ecommerce\\src\\Ecommerce.Domain\\Ecommerce.Domain.csproj"
               }
