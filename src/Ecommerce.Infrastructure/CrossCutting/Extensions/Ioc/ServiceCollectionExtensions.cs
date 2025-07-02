@@ -1,4 +1,5 @@
-﻿using Ecommerce.Application.Dtos;
+﻿using Ecommerce.Application;
+using Ecommerce.Application.Dtos;
 using Ecommerce.Application.Interfaces;
 using Ecommerce.Application.Mappers;
 using Ecommerce.Domain.Core.Interfaces.Repositories;
@@ -56,7 +57,7 @@ namespace Ecommerce.Infrastructure.CrossCutting.Extensions.Ioc
 
         public static IServiceCollection AddAplicationServices(this IServiceCollection servicesCollection)
         {
-            servicesCollection.TryAddScoped<ICustomerApplicationService, ICustomerApplicationService>();
+            servicesCollection.TryAddScoped<ICustomerApplicationService, CustomerApplicationService>();
 
             return servicesCollection;
         }

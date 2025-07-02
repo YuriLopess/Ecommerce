@@ -11,5 +11,9 @@ namespace Ecommerce.Application.Interfaces
     public interface ICustomerApplicationService
     {
         void SaveCustomer(CustomerDto customer);
+        void UpdateCustomer(CustomerDto customer);
+        void DeleteCustomer(string od );
+        IEnumerable<CustomerDto> GetAll(); 
+        CustomerDto GetCustomerById(string id);
     }
 }
